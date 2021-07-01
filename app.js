@@ -17,17 +17,17 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 //listening to dynamically allocated port
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server is up and running");
 });
 
 //serving signup page on home route
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
 
 //handling user data
-app.post("/", function(req, res) {
+app.post("/", function (req, res) {
   const firstName = req.body.firstname;
   const lastName = req.body.lastname;
   const email = req.body.email;
@@ -56,7 +56,7 @@ app.post("/", function(req, res) {
   };
 
   //making request instance for posting data
-  const request = https.request(url, options, function(response) {
+  const request = https.request(url, options, function (response) {
 
     //handling response send by api website
     var status = response.statusCode;
@@ -67,7 +67,7 @@ app.post("/", function(req, res) {
     } else {
       res.sendFile(__dirname + "/failure.html");
     }
-    response.on("data", function(data) {
+    response.on("data", function (data) {
       console.log(JSON.parse(data));
     });
   });
@@ -83,6 +83,6 @@ app.post("/", function(req, res) {
 });
 
 //retry request
-app.post("/failure", function(req, res) {
+app.post("/failure", function (req, res) {
   res.redirect("/");
 })
