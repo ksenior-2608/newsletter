@@ -36,7 +36,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/ksenior-2608/newsletter.git
 
 # Go into the repository
-$ cd event-journal
+$ cd newsletter
 
 # Install dependencies
 $ npm install
