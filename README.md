@@ -7,29 +7,25 @@
   <br>
 </h1>
 
-<h4 align="center">An Exclusive Web Application to activate newsletter subscription. </h4>
+<h4 align="center">An Exclusive Web Application using Maichimp Marketing API. </h4>
 
 <p align="center">
-  <a href="#grabs">Screen Grabs</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#credits">Credits</a> 
 </p>
 
-## Screen Grabs
-  * Sign Up Page
-
-    <img src = "./public/images/signup_ss.png" alt = "signup-page" width = "700">
-  * Subscription request sucess page
-
-    <img src = "./public/images/success_ss.png" alt = "success-page" width = "700">
-  *
-
 ## Key Features
 
-  * Simple sign up page
-    - Takes user credential and uses Mailchimp API to activate subscription. 
+  * Subscribe user.
+    - POST api to register new user as an audience and set it's status to subscribed.
+
+  * Check status of the user.
+    - GET api to check status of user i.e whether he/she is subscribed or unsubscribed
     
+  * Unsubscribe user.
+    - GET api to set current status of the user to unsubscribed.
+
 
 ## How To Use
 
